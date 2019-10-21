@@ -74,4 +74,16 @@ export default [
         name: 'failed-jobs-preview',
         component: require('./screens/failedJobs/job').default,
     },
+
+    {
+        path: '/amazon-reports',
+        name: 'amazon-reports',
+        component: require('./screens/amazonReports/index').default,
+    },
+
+    {
+        path: '/jobs-summary',
+        name: 'jobs-summary',
+        component: require('./screens/jobsSummary/index').default,
+    },
 ];
