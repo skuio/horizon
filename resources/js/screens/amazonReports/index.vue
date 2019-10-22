@@ -221,9 +221,13 @@
                 </tr>
 
                 <tr v-for="job in jobs" :key="job.id">
-                    <td style="max-width: 350px;">
-<!--                        <span :title="job.ReportType">{{job.ReportType.length > 35 ? job.ReportType.slice(0, 35) : job.ReportType}}</span><br>-->
-                        <span :title="job.ReportType">{{job.ReportType}}</span><br>
+                    <td :title="job.ReportType">
+                        <!--                        <span :title="job.ReportType">{{job.ReportType.length > 35 ? job.ReportType.slice(0, 35) : job.ReportType}}</span><br>-->
+                        <span :title="job.ReportType">{{job._id}}</span><br>
+
+                        <small class="text-muted">
+                            Report Type: {{job.ReportType}}
+                        </small><br>
 
                         <small class="text-muted">
                             Sales Channel: {{job.SalesChannelId}}
@@ -231,7 +235,8 @@
 
                         <small class="text-muted" v-if="job.RequestAt">
                             Request At: {{toDate(job.RequestAt)}}
-                        </small><br>
+                            <br>
+                        </small>
 
                         <small class="text-muted" v-if="job.FileName">
                             File Name: {{job.FileName}}
@@ -247,22 +252,37 @@
                     </td>
 
                     <td class="table-fit">
-                        <span v-if="job.ReportProcessingStatus === '_NOT_SUBMITTED_'" class="badge badge-secondary">Pending</span>
+                        <span v-if="job.ReportProcessingStatus === '_PENDING_'" class="badge badge-secondary">
+                            Pending
+                        </span>
 
-                        <span v-if="job.ReportProcessingStatus === '_SUBMITTED_'" class="badge badge-info">Submitted</span>
+                        <span v-if="job.ReportProcessingStatus === '_SUBMITTED_'" class="badge badge-info">
+                            Submitted
+                        </span>
 
-                        <span v-if="job.ReportProcessingStatus === '_IN_PROGRESS_'" class="badge badge-info">In Progress</span>
+                        <span v-if="job.ReportProcessingStatus === '_IN_PROGRESS_'" class="badge badge-info">
+                            In Progress
+                        </span>
 
-                        <span v-if="job.ReportProcessingStatus === '_DONE_NO_DATA_'" class="badge badge-light">Done No Data</span>
+                        <span v-if="job.ReportProcessingStatus === '_DONE_NO_DATA_'" class="badge badge-light">
+                            Done No Data
+                        </span>
 
-                        <span v-if="job.ReportProcessingStatus === '_DONE_'" class="badge badge-primary">Done</span>
+                        <span v-if="job.ReportProcessingStatus === '_DONE_'" class="badge badge-primary">
+                            Done
+                        </span>
 
-                        <span v-if="job.ReportProcessingStatus === '_CANCELLED_'" class="badge badge-danger">Canceled</span>
+                        <span v-if="job.ReportProcessingStatus === '_CANCELLED_'" class="badge badge-danger">
+                            Canceled
+                        </span>
 
-                        <span v-if="job.ReportProcessingStatus === '_FETCHING_'" class="badge badge-info">Fetching Report</span>
+                        <span v-if="job.ReportProcessingStatus === '_FETCHING_'" class="badge badge-info">
+                            Fetching Report
+                        </span>
 
-                        <span v-if="job.ReportProcessingStatus === '_FETCHED_'" class="badge badge-success">Fetched</span>
-
+                        <span v-if="job.ReportProcessingStatus === '_FETCHED_'" class="badge badge-success">
+                            Fetched
+                        </span>
                     </td>
                 </tr>
                 </tbody>
@@ -278,7 +298,10 @@
 </template>
 
 <style>
-    .badge{
+    .badge {
         font-weight: 300;
+    }
+    ul {
+        padding-left: 0px;
     }
 </style>

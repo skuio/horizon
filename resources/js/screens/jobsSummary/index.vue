@@ -228,13 +228,11 @@
                     </td>
 
                     <td class="table-fit">
-                        <ul v-html="getObject(job.options)">
-                        </ul>
+                        <ul v-html="getObject(job.options)"></ul>
                     </td>
 
                     <td class="table-fit">
-                        <ul v-html="getObject(job.summary)">
-                        </ul>
+                        <ul v-html="getObject(job.summary)"></ul>
                     </td>
                 </tr>
                 </tbody>
@@ -248,3 +246,9 @@
 
     </div>
 </template>
+
+<style>
+    ul {
+        padding-left: 0px;
+    }
+</style>
