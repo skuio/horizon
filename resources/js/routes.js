@@ -92,4 +92,10 @@ export default [
         name: 'jobs-summary',
         component: require('./screens/jobsSummary/index').default,
     },
+
+    {
+        path: '/reporting-queue',
+        name: 'reporting-queue',
+        component: require('./screens/reportingQueue/index').default,
+    },
 ];
