@@ -70,7 +70,7 @@
 
                 var tagQuery = this.tagSearchPhrase ? 'tag=' + this.tagSearchPhrase + '&' : '';
 
-                this.$http.get('/' + Horizon.path + '/api/jobs/failed?' + tagQuery + 'starting_at=' + starting)
+                this.$http.get(Horizon.basePath + '/api/jobs/failed?' + tagQuery + 'starting_at=' + starting)
                     .then(response => {
                         if (!this.$root.autoLoadsNewEntries && refreshing && !response.data.jobs.length) {
                             return;
@@ -109,11 +109,13 @@
 
                 this.retryingJobs.push(id);
 
-                this.$http.post('/' + Horizon.path + '/api/jobs/retry/' + id)
+                this.$http.post(Horizon.basePath + '/api/jobs/retry/' + id)
                     .then((response) => {
                         setTimeout(() => {
                             this.retryingJobs = _.reject(this.retryingJobs, job => job == id);
                         }, 5000);
+                    }).catch(error => {
+                        this.retryingJobs = _.reject(this.retryingJobs, job => job == id);
                     });
             },
 

@@ -1,6 +1,85 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/horizon/compare/v3.4.1...3.0)
+## [Unreleased](https://github.com/laravel/horizon/compare/v3.7.2...3.0)
+
+
+## [v3.7.2 (2020-02-25)](https://github.com/laravel/horizon/compare/v3.7.1...v3.7.2)
+
+### Fixed
+- Use provided timezone for delay due ([aa69357](https://github.com/laravel/horizon/commit/aa6935737c093c9abae26f7ebe16980b4b7803e9))
+
+
+## [v3.7.1 (2020-02-18)](https://github.com/laravel/horizon/compare/v3.7.0...v3.7.1)
+
+### Fixed
+- Use 'default' connection as a default redis connection ([#765](https://github.com/laravel/horizon/pull/765))
+
+
+## [v3.7.0 (2020-02-14)](https://github.com/laravel/horizon/compare/v3.6.1...v3.7.0)
+
+### Added
+- Ability to see if a job is delayed ([#755](https://github.com/laravel/horizon/pull/755))
+- Allow trimming of completed jobs ([#720](https://github.com/laravel/horizon/pull/720))
+
+
+## [v3.6.1 (2020-02-12)](https://github.com/laravel/horizon/compare/v3.6.0...v3.6.1)
+
+### Fixed
+- Fix wrong value for failedJobs periods ([#757](https://github.com/laravel/horizon/pull/757))
+
+
+## [v3.6.0 (2020-02-04)](https://github.com/laravel/horizon/compare/v3.5.0...v3.6.0)
+
+### Added
+- Ability to view job details in recent jobs overview ([#751](https://github.com/laravel/horizon/pull/751))
+- Another way for tags displaying & collapsible panels ([#754](https://github.com/laravel/horizon/pull/754))
+
+
+## [v3.5.0 (2020-01-28)](https://github.com/laravel/horizon/compare/v3.4.7...v3.5.0)
+
+### Added
+- Allow Horizon to be used on a subdomain without a subfolder ([#749](https://github.com/laravel/horizon/pull/749))
+
+
+## [v3.4.7 (2020-01-14)](https://github.com/laravel/horizon/compare/v3.4.6...v3.4.7)
+
+### Fixed
+- Revert filtering by tag ([#741](https://github.com/laravel/horizon/pull/741))
+
+
+## [v3.4.6 (2019-12-30)](https://github.com/laravel/horizon/compare/v3.4.5...v3.4.6)
+
+### Changed
+- Reset the retryUntil value ([#736](https://github.com/laravel/horizon/pull/736))
+
+
+## [v3.4.5 (2019-12-23)](https://github.com/laravel/horizon/compare/v3.4.4...v3.4.5)
+
+### Fixed
+- Fix php 7.4 tagged model typed props ([#732](https://github.com/laravel/horizon/pull/732), [025f953](https://github.com/laravel/horizon/commit/025f953b4902a9b0b172e6d5fe19d0809701259e))
+
+### Removed
+- Remove unused functions ([#722](https://github.com/laravel/horizon/pull/722))
+
+
+## [v3.4.4 (2019-12-10)](https://github.com/laravel/horizon/compare/v3.4.3...v3.4.4)
+
+### Fixed
+- Scale to the maxProcesses if timeToClearAll is zero ([#718](https://github.com/laravel/horizon/pull/718))
+- Handle js `phpunserialize` not working with closures ([9c3a75a](https://github.com/laravel/horizon/commit/9c3a75a0f3cc1a2d1805f48c8aab49469cb4ab33))
+
+
+## [v3.4.3 (2019-11-19)](https://github.com/laravel/horizon/compare/v3.4.2...v3.4.3)
+
+### Changed
+- Set default 'tries' to 1 ([#704](https://github.com/laravel/horizon/pull/704))
+
+
+## [v3.4.2 (2019-10-21)](https://github.com/laravel/horizon/compare/v3.4.1...v3.4.2)
+
+### Fixed
+- Prevent 'memory exhausted' when deleting monitored tag ([#690](https://github.com/laravel/horizon/pull/690), [1532f9c](https://github.com/laravel/horizon/commit/1532f9c32d9739a1886357108fe5c4e1dc9b8e78))
+- Set same ttl for tags as same as recent jobs ([#692](https://github.com/laravel/horizon/pull/692))
 
 
 ## [v3.4.1 (2019-10-08)](https://github.com/laravel/horizon/compare/v3.4.0...v3.4.1)
