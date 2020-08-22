@@ -203,7 +203,7 @@
             <table v-if="ready && jobs.length > 0" class="table table-hover table-sm mb-0">
                 <thead>
                 <tr>
-                    <th>Link</th>
+                    <th style="width:5%;">Link</th>
                     <th>Queued At</th>
                     <th>Event Type</th>
                     <th>Status</th>
