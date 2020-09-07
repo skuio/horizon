@@ -178,7 +178,7 @@
     <div>
         <div class="card">
             <div class="card-header d-flex align-items-center justify-content-between">
-                <h5>Amazon Reports</h5>
+                <h5>Reporting Queue</h5>
 
                 <input type="text" class="form-control" v-model="tagSearchPhrase" placeholder="Search Reports"
                        style="width:200px">
@@ -245,6 +245,8 @@
                         <span v-if="job.status === 'recording'" class="badge badge-info">Recording</span>
 
                         <span v-if="job.status === 'recorded'" class="badge badge-success">Recorded</span>
+
+                        <span v-if="job.status === 'failed'" class="badge badge-danger">Failed</span>
 
                     </td>
                 </tr>
