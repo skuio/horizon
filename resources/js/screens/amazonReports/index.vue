@@ -230,7 +230,7 @@
                         </small><br>
 
                         <small class="text-muted">
-                            Sales Channel: {{job.SalesChannelId}}
+                            Sales Channel: {{job.integration_instance ? job.integration_instance.name : ''}}
                         </small><br>
 
                         <small class="text-muted" v-if="job.RequestAt">
