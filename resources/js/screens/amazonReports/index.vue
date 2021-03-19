@@ -223,7 +223,7 @@
                 <tr v-for="job in jobs" :key="job.id">
                     <td :title="job.ReportType">
                         <!--                        <span :title="job.ReportType">{{job.ReportType.length > 35 ? job.ReportType.slice(0, 35) : job.ReportType}}</span><br>-->
-                        <span :title="job.ReportType">{{job._id}}</span><br>
+                        <span :title="job.ReportType">{{job.id}}</span><br>
 
                         <small class="text-muted">
                             Report Type: {{job.ReportType}}
@@ -248,7 +248,7 @@
                     </td>
 
                     <td class="table-fit">
-                        <ul v-html="getObject(job.Options)"></ul>
+                        <ul v-html="getObject(job.request_data)"></ul>
                     </td>
 
                     <td class="table-fit">
