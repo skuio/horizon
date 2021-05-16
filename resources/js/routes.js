@@ -58,14 +58,20 @@ export default [
     },
 
     {
-        path: '/recent-jobs',
-        name: 'recent-jobs',
+        path: '/jobs/:type',
+        name: 'jobs',
         component: require('./screens/recentJobs/index').default,
     },
 
     {
-        path: '/recent-jobs/:jobId',
-        name: 'recent-jobs-preview',
+        path: '/jobs/pending/:jobId',
+        name: 'pending-jobs-preview',
+        component: require('./screens/recentJobs/job').default,
+    },
+
+    {
+        path: '/jobs/completed/:jobId',
+        name: 'completed-jobs-preview',
         component: require('./screens/recentJobs/job').default,
     },
 
@@ -82,20 +88,14 @@ export default [
     },
 
     {
-        path: '/amazon-reports',
-        name: 'amazon-reports',
-        component: require('./screens/amazonReports/index').default,
+        path: '/batches',
+        name: 'batches',
+        component: require('./screens/batches/index').default,
     },
 
     {
-        path: '/jobs-summary',
-        name: 'jobs-summary',
-        component: require('./screens/jobsSummary/index').default,
-    },
-
-    {
-        path: '/reporting-queue',
-        name: 'reporting-queue',
-        component: require('./screens/reportingQueue/index').default,
+        path: '/batches/:batchId',
+        name: 'batches-preview',
+        component: require('./screens/batches/preview').default,
     },
 ];
